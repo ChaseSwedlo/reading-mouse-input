@@ -20,14 +20,14 @@ function getMousePosition(event) {
 mouseBox.addEventListener('mousemove', getMousePosition);
 
 //mouse click
+let mouseIsClicked = false;
 function updateClickStatus() {
     if (mouseIsClicked) {
-        clickStatus.textContent = 'Clicked';
+        clickStatus.innerText = 'Clicked';
     } else {
-        clickStatus.textContent = 'Not clicked';
+        clickStatus.innerText = 'Not clicked';
     }
 }
-let mouseIsClicked = false;
 mouseBox.addEventListener('mousedown', () => {
     mouseIsClicked = true;
     updateClickStatus();
@@ -37,6 +37,7 @@ mouseBox.addEventListener('mouseup', () => {
     updateClickStatus();
 });
 
+//scroll
 function scrollEvent(event) {
     const deltaY = event.deltaY;
     if (deltaY > 0) {
