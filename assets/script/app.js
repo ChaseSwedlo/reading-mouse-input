@@ -42,7 +42,8 @@ function scrollEvent(event) {
     const deltaY = event.deltaY;
     if (deltaY > 0) {
         scroll.innerText = 'down';
-    } else if (deltaY < 0) {
+    }
+    else if (deltaY < 0) {
         scroll.innerText = 'up';
     }
 }
