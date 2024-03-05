@@ -14,8 +14,8 @@ function getMousePosition(event) {
     const rect = mouseBox.getBoundingClientRect();
     xText.innerText = mouseX;
     yText.innerText = mouseY;
-    infoBox.style.top = (mouseY - rect.top - 57) + "px";
-    infoBox.style.left = (mouseX - rect.left - 10) + "px";
+    infoBox.style.top = `${(mouseY - rect.top - 105)}px`;
+    infoBox.style.left = `${(mouseX - rect.left - 10)}px`;
 }
 mouseBox.addEventListener('mousemove', getMousePosition);
 
